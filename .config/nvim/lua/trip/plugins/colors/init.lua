@@ -1,3 +1,3 @@
-local color = require 'trip.plugins.colors.vague'
+local color = require("trip.plugins.colors.kanagawa")
 
 return color

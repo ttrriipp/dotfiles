@@ -63,6 +63,7 @@ export PATH="$PATH:/opt/nvim/"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export NVM_DIR="$HOME/.nvm"
+
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # Loads nvm
 
 PATH="$PATH":"$HOME/.local/scripts/"
@@ -70,3 +71,15 @@ bindkey -s ^f "tmux-sessionizer\n"
 
 # shell integrations
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+#-----------------------
+# keep wsl distro alive
+#-----------------------
+if ! pgrep -u "$(whoami)" -x "dbus-daemon" > /dev/null; then
+   dbus-launch true
+fi
+
+if command -v dbus-launch &> /dev/null && [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
+    eval "$(dbus-launch --sh-syntax 2>/dev/null)"
+fi
