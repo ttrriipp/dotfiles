@@ -42,7 +42,6 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # keybindings
-bindkey -v
 bindkey '^y' autosuggest-accept
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward

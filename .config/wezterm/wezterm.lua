@@ -4,9 +4,9 @@ local config = wezterm.config_builder()
 
 config.font_size = 16
 config.font = wezterm.font_with_fallback({
-	"Hurmit Nerd Font Mono",
+	"JetBrains Mono",
 	"FiraCode Nerd Font",
-	"JetbrainsMono Nerd Font",
+	"Hurmit Nerd Font Mono",
 })
 
 config.front_end = "Software"
@@ -28,6 +28,7 @@ config.animation_fps = 1
 
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
+config.window_background_opacity = 0.75
 
 config.adjust_window_size_when_changing_font_size = false
 
@@ -36,10 +37,10 @@ wezterm.on("toggle-opacity", function(window, pane)
 	local overrides = window:get_config_overrides() or {}
 	local current_opacity = overrides.window_background_opacity
 
-	if current_opacity == nil or current_opacity == 0.69 then
+	if current_opacity == nil or current_opacity == 0.75 then
 		overrides.window_background_opacity = 1.0
 	else
-		overrides.window_background_opacity = 0.69
+		overrides.window_background_opacity = 0.75
 	end
 
 	window:set_config_overrides(overrides)
