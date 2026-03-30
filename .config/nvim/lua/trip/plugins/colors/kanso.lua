@@ -6,6 +6,7 @@ return {
 		---@diagnostic disable-next-line: missing-fields
 		require("kanso").setup({
 			transparent = true,
+			minimal = true,
 		})
 		vim.cmd.colorscheme("kanso-zen")
 	end,

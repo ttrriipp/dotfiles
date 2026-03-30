@@ -40,11 +40,9 @@ return {
 				auto_show = true,
 				auto_show_delay_ms = 500,
 				treesitter_highlighting = true,
-				window = { border = "rounded" },
 			},
 			menu = {
 				scrollbar = false,
-				border = "rounded",
 				draw = {
 					columns = {
 						{ "label", "label_description", gap = 1 },
