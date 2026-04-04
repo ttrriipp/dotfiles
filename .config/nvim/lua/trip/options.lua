@@ -40,6 +40,6 @@ vim.o.scrolloff = 8
 
 vim.o.confirm = true
 
-vim.schedule(function()
-	vim.o.clipboard = "unnamedplus"
-end)
+-- vim.schedule(function()
+-- 	vim.o.clipboard = "unnamedplus"
+-- end)
