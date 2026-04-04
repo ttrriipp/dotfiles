@@ -8,10 +8,6 @@ vim.keymap.set("v", "<leader>d", [["_d]])
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Yank to clipboard" })
 vim.keymap.set("n", "<leader>Y", '"+Y', { desc = "Yank line to clipboard" })
 
--- paste from system clipboard
-vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "Paste after cursor from clipboard" })
-vim.keymap.set({ "n", "v" }, "<leader>P", '"+P', { desc = "Paste before cursor from clipboard" })
-
 -- goated navigations
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
