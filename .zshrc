@@ -54,6 +54,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gg='git log --oneline --abbrev-commit --all --graph --decorate --color'
 alias lg='lazygit'
 alias gs='git status'
+alias gpo='git push origin'
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'

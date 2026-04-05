@@ -52,6 +52,18 @@ config.keys = {
 		mods = "ALT",
 		action = wezterm.action.EmitEvent("toggle-opacity"),
 	},
+	-- Move backward one word
+	{
+		key = "LeftArrow",
+		mods = "CTRL",
+		action = wezterm.action.SendString("\x1bb"),
+	},
+	-- Move forward one word
+	{
+		key = "RightArrow",
+		mods = "CTRL",
+		action = wezterm.action.SendString("\x1bf"),
+	},
 }
 
 config.force_reverse_video_cursor = true
